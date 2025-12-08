@@ -1,5 +1,4 @@
 #include <string>
-#include <cctype>   // isdigit 헤더파일
 
 using namespace std;
 
@@ -13,7 +12,8 @@ bool solution(string s) {
     
     // 2. 숫자 문자열 판별
     for(char c : s) {
-        if(!isdigit(c)) {
+        // isdigit() 생각이 나지 않은 경우
+        if(c < '0' || c > '9') {
             return false;
         }
     }
