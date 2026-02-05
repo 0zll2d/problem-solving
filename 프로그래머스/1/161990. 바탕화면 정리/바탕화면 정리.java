@@ -9,18 +9,10 @@ class Solution {
         for(int i = 0; i < wallpaper.length; i++) {
             for(int j = 0; j < wallpaper[i].length(); j++) {
                 if(wallpaper[i].charAt(j) == '#') {
-                    if(lux > i) {
-                        lux = i;
-                    }
-                    if(luy > j) {
-                        luy = j;
-                    }
-                    if(rdx < i) {
-                        rdx = i;
-                    }
-                    if(rdy < j) {
-                        rdy = j;
-                    }
+                    lux = Math.min(lux, i);
+                    luy = Math.min(luy, j);
+                    rdx = Math.max(rdx, i);
+                    rdy = Math.max(rdy, j);
                 }
             }
         }
