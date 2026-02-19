@@ -1,14 +1,24 @@
 #include <string>
+#include <vector>
 #include <algorithm>
 
 using namespace std;
 
 long long solution(long long n) {
-    // long long 에서 string 변환: to_string()
-    string s = to_string(n);
+    long long answer = 0;
     
-    sort(s.rbegin(), s.rend());
+    vector<int> nums;
     
-    // string 에서  long long 변환: stoll()
-    return stoll(s);
+    while(n) {
+        nums.push_back(n % 10);
+        n /= 10;
+    }
+    
+    sort(nums.rbegin(), nums.rend());
+    
+    for(int i = 0; i < nums.size(); i++) {
+        answer = answer * 10 + nums[i];
+    }
+    
+    return answer;
 }
