@@ -4,7 +4,7 @@ class Solution {
     public int[] solution(String[] park, String[] routes) {
 
         int H = park.length;
-        int W = park[0].length();
+        int W = routes.length;
 
         // 시작 지점 좌표
         int sx = 0;
