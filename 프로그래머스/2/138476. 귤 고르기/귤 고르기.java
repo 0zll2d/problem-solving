@@ -9,34 +9,22 @@ class Solution {
         for(int t : tangerine) {
             m.put(t, m.getOrDefault(t, 0) + 1);
         }
+        
+        /*귤의 타입별 개수는 이미 Map에서 한 번 걸렀으니
+        결국 귤의 타입은 중요하지 않고 개수만 중요함*/
+        List<Integer> tangerineList = new ArrayList<>(m.values());
 
-        List<Tangerine> tangerineList = new ArrayList<>();
+        Collections.sort(tangerineList, (o1, o2) -> o2 - o1);
 
-        for(int key : m.keySet()) {
-            tangerineList.add(new Tangerine(key, m.get(key)));
-        }
-
-        Collections.sort(tangerineList, (o1, o2) -> o2.count - o1.count);
-
-        for(Tangerine t : tangerineList) {
+        for(int t : tangerineList) {
             if(k <= 0) {
                 break;
             }
 
-            k -= t.count;
+            k -= t;
             answer++;
         }
 
         return answer;
-    }
-
-    static class Tangerine {
-        int type;
-        int count;
-
-        Tangerine(int type, int count) {
-            this.type = type;
-            this.count = count;
-        }
     }
 }
