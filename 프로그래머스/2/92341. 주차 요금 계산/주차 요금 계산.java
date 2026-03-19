@@ -4,7 +4,7 @@ class Solution {
     public int[] solution(int[] fees, String[] records) {
 
         Map<String, String> info = new HashMap<>();   // { 차량 번호, 입차 시간 }
-        Map<String, Integer> res = new HashMap<>();   // { 차량 번호, 누적 시간 }
+        Map<String, Integer> res = new TreeMap<>();   // { 차량 번호, 누적 시간 }   +   key 값으로 정렬되는 TreeMap 사용
 
         // 1. 입/출차 내역에서 차량 별 누적 주차 시간 구하기
         for(String record : records) {
@@ -44,7 +44,8 @@ class Solution {
         }
 
         // 3. 차별 주차요금 계산
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);   // Java에서 PQ는 최소힙
+        int[] answer = new int[res.size()];
+        int idx = 0;
 
         for(String num : res.keySet()) {
             int time = res.get(num);
@@ -54,14 +55,7 @@ class Solution {
                 money += (time - fees[0] + fees[2] - 1) / fees[2] * fees[3];
             }
 
-            pq.add(new int[]{Integer.parseInt(num), money});
-        }
-
-        int[] answer = new int[pq.size()];
-        int idx = 0;
-
-        while(!pq.isEmpty()) {
-            answer[idx++] = pq.poll()[1];
+            answer[idx++] = money;
         }
 
         return answer;
