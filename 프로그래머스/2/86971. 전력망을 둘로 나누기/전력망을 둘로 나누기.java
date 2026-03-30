@@ -33,7 +33,7 @@ class Solution {
         // 2. 전력망을 2개로 나눴을 때 개수 구하기
         for(int[] wire : wires) {
             int depth1 = dfs(wire, graph, new boolean[n + 1], wire[0]);
-            int depth2 = dfs(wire, graph, new boolean[n + 1], wire[1]);
+            int depth2 = n - depth1;
 
             answer = Math.min(answer, Math.abs(depth1 - depth2));
         }
