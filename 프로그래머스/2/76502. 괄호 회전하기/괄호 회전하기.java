@@ -4,7 +4,7 @@ class Solution {
     Map<Character, Character> bracket;
 
     boolean check(Deque<Character> q) {
-        Stack<Character> stk = new Stack<>();
+        Deque<Character> stk = new ArrayDeque<>();
 
         while(!q.isEmpty()) {
             char c = q.poll();
