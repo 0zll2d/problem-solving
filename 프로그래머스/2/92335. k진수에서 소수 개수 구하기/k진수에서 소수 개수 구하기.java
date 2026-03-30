@@ -21,21 +21,13 @@ class Solution {
 
         // 구분자 '0'으로 변환
         String[] s = snum.split("0");
-        List<Long> pList = new ArrayList<>();
 
-        if(s.length == 0) { // P 조건 대응: 각 자릿수에 0을 포함하지 않는 소수
-            pList.add(Long.parseLong(snum));
-        } else {    // 0P0, 0P, P0 조건 대응
-            for(int i = 0; i < s.length; i++) {
-                if(s[i].isEmpty()) {    // "00" → "" 제외
-                    continue;
-                }
-                pList.add(Long.parseLong(s[i]));
+        for(int i = 0; i < s.length; i++) {
+            if(s[i].isEmpty()) {    // "00" → "" 제외
+                continue;
             }
-        }
-        // 따라서, { 0P, P0, 0P0 }와 { P }는 상반되는 조건
-
-        for(Long num : pList) {
+            
+            long num = Long.parseLong(s[i]);
             if(isPrime(num)) {
                 answer++;
             }
