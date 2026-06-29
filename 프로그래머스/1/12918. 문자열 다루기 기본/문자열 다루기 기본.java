@@ -1,8 +1,7 @@
 class Solution {
     public boolean solution(String s) {
-
-        for(int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
+        
+        for(char c : s.toCharArray()) {
             if(!Character.isDigit(c)) {
                 return false;
             }
