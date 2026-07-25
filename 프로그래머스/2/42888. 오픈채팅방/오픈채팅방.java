@@ -1,52 +1,41 @@
 import java.util.*;
 
 class Solution {
+     
     public String[] solution(String[] record) {
-
-        final String enterMsg = "님이 들어왔습니다.";
-        final String leaveMsg = "님이 나갔습니다.";
-
-        Map<String, String> user = new HashMap<>();
-        List<Log> logs = new ArrayList<>();
-
-        for(String rec : record) {
-            String[] words = rec.split(" ");
-            String action = words[0];
-            String id = words[1];
-
-            if("Leave".equals(action)) {
-                logs.add(new Log(id, leaveMsg));
+        
+        final String IN = "님이 들어왔습니다.";
+        final String OUT = "님이 나갔습니다.";
+        
+        Map<String, String> users = new HashMap<>(); // {아이디, 닉네임}
+        List<String[]> rooms = new ArrayList<>();   // [아이디, 출입여부]
+        
+        for(String r : record) {
+            String[] word = r.split(" ");
+            String op = word[0];
+            String id = word[1];
+            
+            if("Leave".equals(op)) {
+                rooms.add(new String[]{id, OUT});
                 continue;
             }
-
-            String name = words[2];
-
-            if("Enter".equals(action)) {
-                logs.add(new Log(id, enterMsg));
+            
+            // "Enter" 혹은 "Change"
+            String nickname = word[2];
+            
+            users.put(id, nickname);
+            
+            if("Enter".equals(op)) {
+                rooms.add(new String[]{id, IN});
             }
-
-            user.put(id, name); // 유저 정보 추가(Enter) 및 덮어쓰기(Change)
         }
-
-        String[] answer = new String[logs.size()];
-        int idx = 0;
-
-        for(Log log : logs) {
-            String msg = user.get(log.id) + log.action;
-            answer[idx++] = msg;
+        
+        String[] answer = new String[rooms.size()];
+        
+        for(int i = 0; i < rooms.size(); i++) {
+            answer[i] = users.get(rooms.get(i)[0]) + rooms.get(i)[1];
         }
-
+        
         return answer;
     }
-
-    static class Log {
-        String id;
-        String action;
-
-        Log(String id, String action) {
-            this.id = id;
-            this.action = action;
-        }
-    }
-
 }
