@@ -1,59 +1,45 @@
-import java.util.*;
-
 class Solution {
     
-    Map<String, Character> sharp = new HashMap<>();
-
-    static class Music {
-        String name;
-        int time;
-        int idx;
-
-        Music(String name, int time, int idx) {
-            this.name = name;
-            this.time = time;
-            this.idx = idx;
-        }
-    }
-
     public String solution(String m, String[] musicinfos) {
 
-        sharp.put("C#", '1');
-        sharp.put("D#", '2');
-        sharp.put("F#", '3');
-        sharp.put("G#", '4');
-        sharp.put("A#", '5');
+        m = m.replaceAll("C#", "c")
+                .replaceAll("D#", "d")
+                .replaceAll("F#", "f")
+                .replaceAll("G#", "g")
+                .replaceAll("A#", "a");
 
-        PriorityQueue<Music> pq = new PriorityQueue<>((m1, m2) -> {
-            if(m1.time == m2.time) {
-                return m1.idx - m2.idx;
+        int maxTime = -1;
+        String answer = "(None)";
+
+        for(String musicinfo : musicinfos) {
+            String[] mi = musicinfo.split(",");
+
+            int time = calculateTime(mi[0], mi[1]);
+            String name = mi[2];
+            String melody = mi[3];
+
+            melody = melody.replaceAll("C#", "c")
+                        .replaceAll("D#", "d")
+                        .replaceAll("F#", "f")
+                        .replaceAll("G#", "g")
+                        .replaceAll("A#", "a");
+
+            StringBuilder playing = new StringBuilder();
+
+            for(int i = 0; i < time; i++) {
+                playing.append(melody.charAt(i % melody.length()));
             }
-            return m2.time - m1.time;
-        });
 
-        for(int i = 0; i < musicinfos.length; i++) {
-            String[] mi = musicinfos[i].split(",");
-
-            int time = calculateTime(mi[0], mi[1]);         // 재생 시간
-            String name = mi[2];                            // 음악 제목
-            String melodies = checkMelody(mi[3]);           // 멜로디
-
-            StringBuilder playing = new StringBuilder();    // 재생 시간 내 들리는 멜로디
-
-            for(int j = 0; j < time; j++) {
-                playing.append(melodies.charAt(j % melodies.length()));
+            if(playing.toString().contains(m)) {
+                if(maxTime < time) {
+                    maxTime = time;
+                    answer = name;
+                }
             }
 
-            if(playing.toString().contains(checkMelody(m))) {
-                pq.offer(new Music(name, time, i));
-            }
         }
 
-        if(pq.isEmpty()) {
-            return "(None)";
-        }
-
-        return pq.poll().name;
+        return answer;
     }
 
     int calculateTime(String start, String end) {
@@ -64,20 +50,5 @@ class Solution {
         int emin = Integer.parseInt(end.substring(3, 5));
 
         return ehour * 60 + emin - (shour * 60 + smin);
-    }
-
-    String checkMelody(String melody) {
-        StringBuilder melodies = new StringBuilder();
-
-        for(int i = 0; i < melody.length(); i++) {
-            if(i < melody.length() - 1 && melody.charAt(i + 1) == '#') {
-                melodies.append(sharp.get(melody.substring(i, i + 2)));
-                i++;
-            } else {
-                melodies.append(melody.charAt(i));
-            }
-        }
-
-        return melodies.toString();
     }
 }
