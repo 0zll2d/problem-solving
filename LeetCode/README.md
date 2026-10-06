@@ -11,4 +11,12 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0125-valid-palindrome/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
 <!---LeetCode Topics End-->
