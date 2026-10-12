@@ -17,13 +17,16 @@ Contains topicwise list of solved problems.
 | ------- | ------- |
 | [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
+| [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
+| [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
+| [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 <!---LeetCode Topics End-->
