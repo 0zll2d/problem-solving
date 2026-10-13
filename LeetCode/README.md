@@ -19,6 +19,7 @@ Contains topicwise list of solved problems.
 | [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
+| [0560-subarray-sum-equals-k](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0560-subarray-sum-equals-k/) | Medium |
 | [1480-running-sum-of-1d-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/1480-running-sum-of-1d-array/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -27,6 +28,7 @@ Contains topicwise list of solved problems.
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0242-valid-anagram/) | Easy |
+| [0560-subarray-sum-equals-k](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0560-subarray-sum-equals-k/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -36,5 +38,6 @@ Contains topicwise list of solved problems.
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0560-subarray-sum-equals-k](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0560-subarray-sum-equals-k/) | Medium |
 | [1480-running-sum-of-1d-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/1480-running-sum-of-1d-array/) | Easy |
 <!---LeetCode Topics End-->
