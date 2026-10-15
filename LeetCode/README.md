@@ -63,4 +63,20 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
+## Design
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
+## Data Stream
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
 <!---LeetCode Topics End-->
