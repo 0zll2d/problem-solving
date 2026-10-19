@@ -22,6 +22,7 @@ Contains topicwise list of solved problems.
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0560-subarray-sum-equals-k/) | Medium |
+| [0739-daily-temperatures](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0739-daily-temperatures) | Medium |
 | [1480-running-sum-of-1d-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/1480-running-sum-of-1d-array/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -68,6 +69,7 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
+| [0739-daily-temperatures](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0739-daily-temperatures) | Medium |
 | [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
 ## Design
 | Problem Name | Difficulty |
@@ -77,6 +79,7 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
+| [0739-daily-temperatures](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0739-daily-temperatures) | Medium |
 | [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
 ## Data Stream
 | Problem Name | Difficulty |
