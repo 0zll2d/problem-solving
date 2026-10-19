@@ -13,6 +13,7 @@ Contains topicwise list of solved problems.
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
 | [0125-valid-palindrome](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0125-valid-palindrome/) | Easy |
 | [0242-valid-anagram](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0242-valid-anagram/) | Easy |
+| [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -66,6 +67,7 @@ Contains topicwise list of solved problems.
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
 | [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
 ## Design
 | Problem Name | Difficulty |
@@ -74,9 +76,14 @@ Contains topicwise list of solved problems.
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
 | [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
 ## Data Stream
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0901-online-stock-span](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0901-online-stock-span/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0402-remove-k-digits](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0402-remove-k-digits) | Medium |
 <!---LeetCode Topics End-->
