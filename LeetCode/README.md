@@ -19,6 +19,7 @@ Contains topicwise list of solved problems.
 | ------- | ------- |
 | [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
+| [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0560-subarray-sum-equals-k/) | Medium |
@@ -38,6 +39,7 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
+| [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
@@ -49,10 +51,12 @@ Contains topicwise list of solved problems.
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
 | [1046-last-stone-weight](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/1046-last-stone-weight/) | Easy |
 ## Bucket Sort
@@ -66,6 +70,7 @@ Contains topicwise list of solved problems.
 ## Quickselect
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0347-top-k-frequent-elements/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
