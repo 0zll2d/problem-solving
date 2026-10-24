@@ -1,47 +1,36 @@
 import java.util.*;
+import java.io.*;
 
 class Solution {
-    int[] getTime(String time) {
-        int hour = Integer.parseInt(time.substring(0, 2));
-        int min = Integer.parseInt(time.substring(3, 5));
-        int total = hour * 60 + min;
-        
-        return new int[]{hour, min, total};
-    }
     
     public int solution(String[][] book_time) {
-
-        Arrays.sort(book_time, (a, b) -> a[0].compareTo(b[0])); // 문자열 비교는 compareTo()
         
-        List<int[]> rooms = new ArrayList<>();
+        Arrays.sort(book_time, (b1, b2) -> b1[0].compareTo(b2[0])); // 입실 시각 순으로 정렬
         
-        for(String[] bt : book_time) {
-            int[] start_time = getTime(bt[0]);
-            int[] end_time = getTime(bt[1]);
-            
-            // 모든 객실이 비어있으면
-            if(rooms.isEmpty()) {
-                rooms.add(end_time);
-                continue;
-            }
-            
-            // 모든 객실이 비어있지 않으면, 퇴실 시간 기준으로 사용할 수 있는 방 확인
-            boolean is_new = true;  // 새 객실 필요
-            
-            for(int i = 0; i < rooms.size(); i++) {
-                // 10분간 청소 후 객실 사용 가능
-                if(rooms.get(i)[2] + 10 <= start_time[2]) {
-                    rooms.set(i, end_time);
-                    is_new = false;
-                    break;
+        PriorityQueue<String[]> pq = new PriorityQueue<>((a, b) -> a[1].compareTo(b[1]));
+        int n = book_time.length;
+        
+        for(String[] bk : book_time) {
+            if(!pq.isEmpty()) {
+                int out = convertTime(pq.peek()[1]);    // 객실 퇴실 시각
+                int in = convertTime(bk[0]);
+                
+                // 다음 입실 시각이 퇴실 후 10분간 청소 후보다 뒤면 해당 객실 사용
+                if(out + 10 <= in) {
+                    pq.poll();
                 }
             }
-            
-            if(is_new) {
-                rooms.add(end_time);
-            }
+            pq.offer(bk);
         }
         
-        return rooms.size();
+        return pq.size();
+    }
+
+    // 시각을 분으로 변환
+    int convertTime(String time) {
+        int hour = Integer.parseInt(time.substring(0, 2));
+        int min = Integer.parseInt(time.substring(3, 5));
+        
+        return hour * 60 + min;
     }
 }
