@@ -18,6 +18,7 @@ Contains topicwise list of solved problems.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0001-two-sum/) | Easy |
+| [0035-search-insert-position](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0035-search-insert-position) | Easy |
 | [0049-group-anagrams](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0049-group-anagrams) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0217-contains-duplicate/) | Easy |
@@ -100,5 +101,6 @@ Contains topicwise list of solved problems.
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0035-search-insert-position](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0035-search-insert-position) | Easy |
 | [0704-binary-search](https://github.com/0zll2d/problem-solving/tree/main/LeetCode/0704-binary-search) | Easy |
 <!---LeetCode Topics End-->
