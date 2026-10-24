@@ -4,22 +4,13 @@ import java.io.*;
 class Solution {
     
     public int[] solution(int[] sequence, int k) {
-        
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
-            int alen = a[1] - a[0];
-            int blen = b[1] - b[0];
-            
-            if(alen == blen) {
-                return a[0] - b[0];
-            }
-            
-            return alen - blen;
-        });
+        int[] answer = new int[2];
         
         // 투포인터 풀이 [start, end)
         int start = 0;
         int end = 0;
         int sum = 0;
+        int minLength = Integer.MAX_VALUE;
         
         while(start <= end) {
             if(sum < k && end < sequence.length) {
@@ -34,10 +25,15 @@ class Solution {
             }
             
             if(sum == k) {
-                pq.offer(new int[]{start, end - 1});
+                int length = end - start;
+                
+                if(length < minLength || length == minLength && start < answer[0]) {
+                    minLength = length;
+                    answer = new int[]{start, end - 1};
+                }
             }
         }
         
-        return pq.poll();
+        return answer;
     }
 }
