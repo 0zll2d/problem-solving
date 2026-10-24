@@ -17,3 +17,9 @@ Algorithm & Data Structure Practice with **Java and C++**
 | Map           | Key-Value 저장 및 조회 | [Map API](./docs/map.md)                     |
 | StringBuilder | 가변 문자열 조작       | [StringBuilder API](./docs/string-builder.md) |
 | Stack         | LIFO 삽입·삭제         | [Stack API](./docs/stack.md)                  |
+
+## Algorithms
+
+| 알고리즘 | 설명 | 문서 |
+| --- | --- | --- |
+| 이분 탐색 | 탐색 구간·종료 조건, 중복 값 검색, Lower/Upper Bound | [Binary Search](./docs/binary-search.md) |
