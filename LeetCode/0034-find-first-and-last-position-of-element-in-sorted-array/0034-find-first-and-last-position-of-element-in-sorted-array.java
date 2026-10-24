@@ -18,6 +18,11 @@ class Solution {
 
         lb = left;
 
+        if(lb == nums.length || nums[lb] != target) {   // early return
+            return new int[]{-1, -1};
+        }
+
+
         int ub = -1;    // [Upper Bound] target 초과인 첫 인덱스
 
         left = 0;
@@ -35,6 +40,6 @@ class Solution {
 
         ub = left - 1;
 
-        return lb > ub ? new int[]{-1, -1} : new int[]{lb, ub};
+        return new int[]{lb, ub};
     }
 }
