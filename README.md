@@ -15,6 +15,7 @@ Algorithm & Data Structure Practice with **Java and C++**
 | 자료구조      | 설명                   | 문서                                         |
 | ------------- | ---------------------- | -------------------------------------------- |
 | Map           | Key-Value 저장 및 조회 | [Map API](./docs/map.md)                     |
+| Set           | 중복 없는 원소 저장    | [Set API](./docs/set.md)                     |
 | StringBuilder | 가변 문자열 조작       | [StringBuilder API](./docs/string-builder.md) |
 | Stack         | LIFO 삽입·삭제         | [Stack API](./docs/stack.md)                  |
 | Queue         | FIFO 삽입·삭제         | [Queue API](./docs/queue.md)                  |

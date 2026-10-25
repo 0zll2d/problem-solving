@@ -12,24 +12,26 @@
 
 ## 2. 기본 API
 
-| 기능                | Java                                         | C++                                         |
-| ------------------- | -------------------------------------------- | ------------------------------------------- |
-| 삽입·수정           | `V put(K key, V value)`                      | `m[key] = value`                            |
-| Key 없을 때 삽입    | `V putIfAbsent(K key, V value)`              | `pair<iterator, bool> insert({key, value})` |
-| Key 없을 때 값 생성 | `V computeIfAbsent(K key, Function f)`       | -                                           |
-| 값 조회             | `V get(Object key)`                          | `V& at(const K& key)`                       |
-| 기본값 조회         | `V getOrDefault(Object key, V defaultValue)` | -                                           |
-| Key 존재 확인       | `boolean containsKey(Object key)`            | `size_t count(const K& key)`                |
-| Key 탐색            | -                                            | `iterator find(const K& key)`               |
-| Key 목록            | `Set<K> keySet()`                            | -                                           |
-| Value 목록          | `Collection<V> values()`                     | -                                           |
-| Key-Value 목록      | `Set<Map.Entry<K,V>> entrySet()`             | -                                           |
-| Key 조회 (Entry)    | `K getKey()`                                 | `entry.first`                               |
-| Value 조회 (Entry)  | `V getValue()`                               | `entry.second`                              |
-| 삭제                | `V remove(Object key)`                       | `size_t erase(const K& key)`                |
-| 크기                | `int size()`                                 | `size_t size()`                             |
-| 비어 있는지         | `boolean isEmpty()`                          | `bool empty()`                              |
-| 전체 삭제           | `void clear()`                               | `void clear()`                              |
+| 기능               | Java                                         | C++                                         | Hash    | Tree     |
+| ---------------- | -------------------------------------------- | ------------------------------------------- | ------- | -------- |
+| 삽입·수정            | `V put(K key, V value)`                      | `m[key] = value`                            | 평균 O(1) | O(log N) |
+| Key 없을 때 삽입      | `V putIfAbsent(K key, V value)`              | `pair<iterator, bool> insert({key, value})` | 평균 O(1) | O(log N) |
+| Key 없을 때 값 생성    | `V computeIfAbsent(K key, Function f)`       | -                                           | 평균 O(1) | O(log N) |
+| 값 조회             | `V get(Object key)`                          | `V& at(const K& key)`                       | 평균 O(1) | O(log N) |
+| 기본값 조회           | `V getOrDefault(Object key, V defaultValue)` | -                                           | 평균 O(1) | O(log N) |
+| Key 존재 확인        | `boolean containsKey(Object key)`            | `size_t count(const K& key)`                | 평균 O(1) | O(log N) |
+| Key 탐색           | -                                            | `iterator find(const K& key)`               | 평균 O(1) | O(log N) |
+| Key 목록           | `Set<K> keySet()`                            | -                                           | O(1)    | O(1)     |
+| Value 목록         | `Collection<V> values()`                     | -                                           | O(1)    | O(1)     |
+| Key-Value 목록     | `Set<Map.Entry<K,V>> entrySet()`             | -                                           | O(1)    | O(1)     |
+| Key 조회 (Entry)   | `K getKey()`                                 | `entry.first`                               | O(1)    | O(1)     |
+| Value 조회 (Entry) | `V getValue()`                               | `entry.second`                              | O(1)    | O(1)     |
+| 삭제               | `V remove(Object key)`                       | `size_t erase(const K& key)`                | 평균 O(1) | O(log N) |
+| 크기               | `int size()`                                 | `size_t size()`                             | O(1)    | O(1)     |
+| 비어 있는지           | `boolean isEmpty()`                          | `bool empty()`                              | O(1)    | O(1)     |
+| 전체 삭제            | `void clear()`                               | `void clear()`                              | O(N)    | O(N)     |
+
+> Hash: `HashMap` / `unordered_map`, Tree: `TreeMap` / `map`
 
 > **주의**
 >
@@ -37,6 +39,8 @@
 > - C++ `m[key]`는 Key가 없으면 기본값을 생성해 삽입한다.
 > - C++ `at()`은 Key가 없으면 `std::out_of_range` 예외가 발생한다.
 > - C++ `find()`는 Key가 없으면 `end()`를 반환한다.
+> - Hash 계열은 해시 충돌이 많으면 최악 O(N)까지 느려진다.
+> - `keySet()`, `values()`, `entrySet()`은 복사 없이 뷰(view)를 반환하므로 O(1)이다. 순회하면 O(N)이다.
 
 ## 3. Map 순회
 
