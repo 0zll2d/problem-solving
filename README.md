@@ -14,6 +14,7 @@ Algorithm & Data Structure Practice with **Java and C++**
 
 | 자료구조      | 설명                   | 문서                                         |
 | ------------- | ---------------------- | -------------------------------------------- |
+| List          | 순서 있는 원소 저장    | [List API](./docs/list.md)                   |
 | Map           | Key-Value 저장 및 조회 | [Map API](./docs/map.md)                     |
 | Set           | 중복 없는 원소 저장    | [Set API](./docs/set.md)                     |
 | StringBuilder | 가변 문자열 조작       | [StringBuilder API](./docs/string-builder.md) |
