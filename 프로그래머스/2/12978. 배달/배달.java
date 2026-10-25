@@ -1,88 +1,66 @@
 import java.util.*;
+import java.io.*;
 
 class Solution {
-
-    // graph에서는 간선 정보, PriorityQueue에서는 현재까지의 누적 비용을 저장하는 데 사용
-    static class Node {
-        int vertex;
-        int weight;
-
-        Node(int vertex, int weight) {
-            this.vertex = vertex;
-            this.weight = weight;
-        }
-    }
-
     public int solution(int N, int[][] road, int K) {
-
-        // 1. 그래프 생성
-        List<Node>[] graph = new ArrayList[N + 1];
-
-        for (int i = 1; i <= N; i++) {
-            graph[i] = new ArrayList<>();
+        
+        List<List<int[]>> graph = new ArrayList<>();
+        
+        for(int i = 0; i <= N; i++) {
+            graph.add(new ArrayList<>());
         }
-
-        for (int[] r : road) {
-            int from = r[0];
-            int to = r[1];
-            int weight = r[2];
-
-            // 양방향 그래프
-            graph[from].add(new Node(to, weight));
-            graph[to].add(new Node(from, weight));
+        
+        for(int[] edge : road) {
+            int a = edge[0];
+            int b = edge[1];
+            int c = edge[2];
+            
+            graph.get(a).add(new int[]{b, c});
+            graph.get(b).add(new int[]{a, c});
         }
-
-        // 2. 다익스트라
-        return dijkstra(N, K, graph);
+        
+        return dijkstra(graph, N, K);
     }
-
-    int dijkstra(int N, int K, List<Node>[] graph) {
-
-        PriorityQueue<Node> pq =
-                new PriorityQueue<>((a, b) -> a.weight - b.weight);
-
+    
+    int dijkstra(List<List<int[]>> graph, int N, int K) {
+        PriorityQueue<int[]> pq = new PriorityQueue<>(
+            (a, b) -> a[1] - b[1]
+        );  // {다음 정점, 누적 거리}
         int[] dist = new int[N + 1];
+        
         Arrays.fill(dist, Integer.MAX_VALUE);
-
+        
+        pq.offer(new int[]{1, 0});
         dist[1] = 0;
-        pq.offer(new Node(1, 0));
-
-        while (!pq.isEmpty()) {
-
-            Node cur = pq.poll();
-
-            int now = cur.vertex;
-            int cost = cur.weight;   // 시작점 -> now까지의 누적 비용
-
-            // 이미 더 짧은 경로를 알고 있다면 무시
-            if (cost > dist[now]) {
+        
+        while(!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int node = cur[0];
+            int cost = cur[1];
+            
+            if(cost > dist[node]) {
                 continue;
             }
-
-            // 현재 정점과 연결된 간선 탐색
-            for (Node edge : graph[now]) {
-
-                int next = edge.vertex;
-                int newCost = dist[now] + edge.weight;
-
-                if (dist[next] > newCost) {
-
-                    dist[next] = newCost;
-
-                    // PQ에는 "누적 비용"을 넣는다.
-                    pq.offer(new Node(next, newCost));
+            
+            for(int[] next : graph.get(node)) {
+                int nextNode = next[0];
+                int nextCost = cost + next[1];  // 사실상 그래프의 next[1]은 A-B 사이 거리(가중치) 이므로 누적 거리 + 가중치
+                
+                if(nextCost < dist[nextNode]) {
+                    pq.offer(new int[]{nextNode, nextCost});
+                    dist[nextNode] = nextCost;
                 }
             }
         }
-
+        
         int result = 0;
-
-        for (int i = 1; i <= N; i++) {
-            if (dist[i] <= K) {
+        
+        for(int i = 1; i <= N; i++) {
+            if(dist[i] <= K) {
                 result++;
             }
         }
-
+        
         return result;
     }
 }
